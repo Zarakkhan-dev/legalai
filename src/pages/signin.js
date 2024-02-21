@@ -1,16 +1,16 @@
 
-import Signup from '@/Component/Signup/Signup'
+import Signin from '@/Component/Signin/Signin'
 import React from 'react'
 import Navbar from "@/Component/Navbar/Navbar"
 
-const signup = () => {
+const signin = () => {
   return (
     <>
    
     <Navbar/>
-    <Signup/>
+    <Signin/>
     </>
   )
 }
 
-export default signup
+export default signin

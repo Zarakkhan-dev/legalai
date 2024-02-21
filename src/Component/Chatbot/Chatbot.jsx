@@ -3,7 +3,7 @@ import axios from 'axios';
 import Chat from './Chat';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import logo from "../../../public/LegalAI.png"
+import logo from "../../../public/Picture/LegalAI.png"
 const Chatbot = () => {
     const router = useRouter();
     const [fields,updateFields] =useState("");

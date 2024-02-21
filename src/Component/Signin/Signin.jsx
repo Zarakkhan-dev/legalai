@@ -3,8 +3,8 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from 'next/image';
-import Logo from "../../../public/LegalAI.png"
-import Signup_Image from "../../../public/Signup_Image.jpg"
+import Logo from "../../../public/Picture/LegalAI.png"
+import Signup_Image from "../../../public/Picture/Signup_Image.jpg"
 const Signin = () => {
   const router = useRouter();
   const [inputText,update_text] = useState({
@@ -51,7 +51,7 @@ const Submission  = async(e)=>{
                 <Link href="/signup">
                 <button className="bg-transparent text-black border-[1px] border-solid border-black px-7 py-4 rounded-xl text-[20px]"> Sign Up</button>
                 </Link>
-                <Link  href="/">
+                <Link  href="/signin">
                 <button className="bg-[#2C60EA] text-white font-bold px-7 py-4 rounded-xl text-[20px] "> Sign In</button>
                 </Link>
             </div>

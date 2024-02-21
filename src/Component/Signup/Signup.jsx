@@ -3,8 +3,8 @@ import axios from 'axios'
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import Logo from "../../../public/LegalAI.png"
-import Signup_Image from "../../../public/Signup_Image.jpg"
+import Logo from "../../../public/Picture/LegalAI.png"
+import Signup_Image from "../../../public/Picture/Signup_Image.jpg"
 const Signup = () => {
 const [inputText,update_text] = useState({
     username:"",
@@ -56,7 +56,7 @@ const submit_Input =(e)=>{
     }
   return (
 <>
-<div className="Signup_Container h-[100vh] ">
+<div className="Signup_Container ">
  <div className="Signup_Page">
     <div className="Signup_Side">
 
@@ -70,7 +70,7 @@ const submit_Input =(e)=>{
             <Link href="/signup">
                 <button className="bg-[#2C60EA] text-white font-bold px-7 py-4 rounded-xl text-[20px] "> Sign Up</button>
                 </Link>
-                <Link href="/">
+                <Link href="/signin">
                 <button className="bg-transparent text-black border-[1px] border-solid border-black px-7 py-4 rounded-xl text-[20px]" > Sign In</button>
                 </Link>
             </div>

@@ -1,7 +1,7 @@
 .navbar{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    justify-content: space-between;
+    justify-items: space-around;
     align-items: center;
     gap:2vh;
 }
