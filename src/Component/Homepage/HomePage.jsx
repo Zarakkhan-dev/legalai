@@ -24,7 +24,7 @@ const HomePage = () => {
       <div className="header-email-box flex border border-[$292A30] rounded-3xl py-2  w-[65%] ">
         <input type="email" name="" id="" placeholder='Email Address' className='ml-5 w-[34vh] outline-none' />
         <div className="icon bg-[#2C60EA] rounded-full py-2 px-3 ">
-        <i class="fa-solid fa-paper-plane " style={{color:"white"}}></i>
+        <i className="fa-solid fa-paper-plane " style={{color:"white"}}></i>
         </div>
       </div>
       <div className="flex items-center">

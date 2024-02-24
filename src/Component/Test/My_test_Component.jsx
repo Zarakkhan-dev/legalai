@@ -1,11 +1,9 @@
 import React from 'react'
-import Image from 'next/image'
-import logo  from "../../../public/Picture/LegalAI.png"
-import Link from 'next/link'
-import My_test_Component from "../Test/My_test_Component"
-const Navbar = () => {
+import logo  from "../../../public/Picture/LegalAI.png";
+import Image from 'next/image';
+import Link from 'next/link';
+const My_test_Component = () => {
   return (
-   <>
     <div className="relative w-full bg-white">
   <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
     <div className="inline-flex items-center space-x-2">
@@ -18,7 +16,7 @@ const Navbar = () => {
         <li>
           <Link
             href="/"
-            className="text-lg font-semibold text-gray-800 hover:text-gray-600"
+            className="text-sm font-semibold text-gray-800 hover:text-gray-900"
           >
             Home
           </Link>
@@ -26,7 +24,7 @@ const Navbar = () => {
         <li>
           <Link
             href="/contactus"
-            className="text-lg font-semibold text-gray-800 hover:text-gray-600 "
+            className="text-sm font-semibold text-gray-800 hover:text-gray-900"
           >
             Contact us
           </Link>
@@ -34,22 +32,19 @@ const Navbar = () => {
         <li>
           <Link
             href="/about"
-            className="text-lg font-semibold text-gray-800 hover:text-gray-600"
+            className="text-sm font-semibold text-gray-800 hover:text-gray-900"
           >
-            About us
+            About
           </Link>
         </li>
       </ul>
     </div>
     <div className="hidden lg:block">
-        <Link href='/signin' className='text-lg font-semibold text-gray-800 hover:text-gray-600 mr-3' >
-            Login
-        </Link>
       <button
         type="button"
-        className=" bg-[#2C60EA] px-[5vh] py-3 text-lg font-semibold text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black rounded-3xl"
+        className="rounded-md bg-[#2C60EA] px-3 py-2 text-lg font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
       >
-        Try AILegal Assistant Free
+        Button text
       </button>
     </div>
     <div className="lg:hidden">
@@ -72,8 +67,8 @@ const Navbar = () => {
     </div>
   </div>
 </div>
-   </>
+
   )
 }
 
-export default Navbar
+export default My_test_Component
