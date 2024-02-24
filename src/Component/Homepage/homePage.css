@@ -1,3 +1,6 @@
 .Header-image img{
     transform: rotate(-5deg);
 }
+.header-email-box{
+    justify-self: start;
+}

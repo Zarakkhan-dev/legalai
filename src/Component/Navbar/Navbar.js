@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import logo  from "../../../public/Picture/LegalAI.png"
 import Link from 'next/link'
 
 const Navbar = () => {
+  const [menu_icon,SetIcon] = useState("bars");
   return (
    <>
     <div className="relative w-full bg-white">
-  <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
+  <div className="mx-auto flex max-w-7xl items-center justify-between px-3 py-1 sm:px-6 lg:px-7">
     <div className="inline-flex items-center space-x-2">
       <span>
-      <Image src={logo}  height={120} width={120} className='md:w-[100%] md:h-[100%] sm:w-[50%] sm:h-[50%] ' />
+      <Image src={logo}  height={120} width={120} className='active-Logo w-[100%] h-[100%]  ' />
       </span>
     </div>
     <div className="hidden lg:block">
@@ -53,22 +54,7 @@ const Navbar = () => {
       </button>
     </div>
     <div className="lg:hidden">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        className="h-6 w-6 cursor-pointer"
-      >
-        <line x1="4" y1="12" x2="20" y2="12"></line>
-        <line x1="4" y1="6" x2="20" y2="6"></line>
-        <line x1="4" y1="18" x2="20" y2="18"></line>
-      </svg>
+    <i className={`fa-solid fa-${menu_icon} fa-2xl`} onClick={()=>menu_icon ==="bars" ?SetIcon("xmark"):SetIcon("bars") }></i>
     </div>
   </div>
 </div>
