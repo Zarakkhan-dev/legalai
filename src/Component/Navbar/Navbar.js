@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import logo  from "../../../public/Picture/LegalAI.png"
 import Link from 'next/link'
-import My_test_Component from "../Test/My_test_Component"
+
 const Navbar = () => {
   return (
    <>
@@ -10,7 +10,7 @@ const Navbar = () => {
   <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
     <div className="inline-flex items-center space-x-2">
       <span>
-      <Image src={logo}  height={120} width={120} className='w-[100%] h-[100%]' />
+      <Image src={logo}  height={120} width={120} className='md:w-[100%] md:h-[100%] sm:w-[50%] sm:h-[50%] ' />
       </span>
     </div>
     <div className="hidden lg:block">
