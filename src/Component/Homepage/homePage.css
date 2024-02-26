@@ -4,3 +4,36 @@
 .header-email-box{
     justify-self: start;
 }
+
+.Detail-Section-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 4vh
+}
+.Detail-Section-Image-1 img{
+    
+    position: relative;
+    top:-13%;
+    left: 20%;
+
+}
+.Detail-Section-content ul li{
+    position: relative;
+    padding: 1vh;
+}
+.Detail-Section-content ul li::before{
+ content:"";
+ position: absolute;
+ top: 25%;
+ left: -6%;
+ width: 10px;
+ height: 10px;
+ background-color: #2C60EA ;
+ border-radius: 15px;
+}
+
+@media only screen and (max-width: 760px)   {
+    .Header-image{
+        display: none;
+    }
+}
