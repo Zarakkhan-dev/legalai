@@ -1,60 +1,135 @@
 import React from 'react'
-
+import logo  from "../../../public/Picture/LegalAI.png";
+import Image from 'next/image';
 const Footer = () => {
   return (
     <>
-    <footer className="">
-  <div className="mx-auto grid max-w-screen-xl gap-y-8 gap-x-12 px-4 py-10 sm:px-20 md:grid-cols-2 xl:grid-cols-4 xl:px-10">
-    <div className="max-w-sm">
-      <div className="mb-6 flex h-10 items-center space-x-2">
-        <img className="h-full object-contain" src="/images/logo-circle.png" alt="" />
-        <span className="text-lg font-medium">Boleno</span>
-      </div>
-      <div className="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis ad a officia ea expedita!</div>
-    </div>
-    <div className="">
-      <div className="mt-4 mb-2 font-medium xl:mb-4">Guides</div>
-      <nav aria-label="Guides Navigation" className="text-gray-500">
-        <ul className="space-y-3">
-          <li><a className="hover:text-blue-600 hover:underline" href="#">How to make a footer</a></li>
-          <li><a className="hover:text-blue-600 hover:underline" href="#">Designing your app</a></li>
-          <li><a className="hover:text-blue-600 hover:underline" href="#">Getting help from the community</a></li>
-          <li><a className="hover:text-blue-600 hover:underline" href="#">Pricing vs Hourly Rate</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div className="">
-      <div className="mt-4 mb-2 font-medium xl:mb-4">Links</div>
-      <nav aria-label="Footer Navigation" className="text-gray-500">
-        <ul className="space-y-3">
-          <li><a className="hover:text-blue-600 hover:underline" href="#">Pricing</a></li>
-          <li><a className="hover:text-blue-600 hover:underline" href="#">Demo</a></li>
-          <li><a className="hover:text-blue-600 hover:underline" href="#">Press</a></li>
-          <li><a className="hover:text-blue-600 hover:underline" href="#">Support Hub</a></li>
-          <li><a className="hover:text-blue-600 hover:underline" href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div className="">
-      <div className="mt-4 mb-2 font-medium xl:mb-4">Support Us on Product Hunt</div>
-      <div className="flex flex-col">
-        <div className="mb-4">
-          <a href="https://www.producthunt.com/products/Apple?utm_source=badge-follow&utm_medium=badge&utm_souce=badge-Apple" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/follow.svg?post_id=100070&theme=light" alt="Apple - Think&#0032;Different | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+   <footer className="bg-[#1F232E]">
+  <div className="mx-auto  space-y-8 px-1 py-16 lg:space-y-16  max-w-screen-lg">
+    <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+      <div>
+        <div className="text-4xl font-bold text-[#2c60ea]">
+         Al <span className='text-white text-sm font-normal'>Legal Assistant</span>
         </div>
+
+        <p className="mt-4 max-w-xs text-white w-[50%]">
+        A complete AI based law firm assistant
+        </p>
+
+        <ul className="mt-8 flex gap-4">
+          <li>
+            <a
+              href="#"
+              className="text-white transition hover:opacity-75 text-2xl bg-[#373F51] py-2 px-4 rounded-full "
+            >
+              <i className="fa-brands fa-facebook-f"></i>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#"
+              target="_blank"
+              className="text-white transition hover:opacity-75 text-2xl bg-[#373F51] py-2 px-3 rounded-full"
+            >
+              <i className="fa-brands fa-linkedin-in"></i>
+          
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#"
+              rel="noreferrer"
+              target="_blank"
+              className="text-white transition hover:opacity-75 text-2xl py-2 px-3 rounded-full bg-[#373F51] "
+            >
+             <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
+        <div>
+          <p className="font-medium text-white">Product</p>
+
+          <ul className="mt-6 space-y-4 text-sm">
+            <li>
+              <a href="#" className="text-white transition hover:opacity-75"> Lorem ipsum </a>
+            </li>
+
+            <li>
+              <a href="#" className="text-white transition hover:opacity-75"> Lorem ipsum </a>
+            </li>
+
+            <li>
+              <a href="#" className="text-white transition hover:opacity-75"> Lorem ipsum </a>
+            </li>
+
+            <li>
+              <a href="#" className="text-white transition hover:opacity-75"> Lorem ipsum </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p className="font-medium text-white">Solutions</p>
+
+          <ul className="mt-6 space-y-4 text-sm">
+            <li>
+              <a href="#" className="text-white transition hover:opacity-75"> Lorem ipsum  </a>
+            </li>
+
+            <li>
+              <a href="#" className="text-white transition hover:opacity-75"> Lorem ipsum </a>
+            </li>
+
+            <li>
+              <a href="#" className="text-white transition hover:opacity-75"> Lorem ipsum</a>
+            </li>
+
+            <li>
+              <a href="#" className="text-white transition hover:opacity-75"> Lorem ipsum</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p className="font-medium text-white ">Company</p>
+
+          <ul className="mt-6 space-y-4 text-sm">
+            <li>
+              <a href="#" className="text-white  transition hover:opacity-75"> Lorem ipsum</a>
+            </li>
+
+            <li>
+              <a href="#" className="text-white  transition hover:opacity-75"> Lorem ipsum</a>
+            </li>
+
+            <li>
+              <a href="#" className="text-white  transition hover:opacity-75"> Lorem ipsum</a>
+            </li>
+
+            <li>
+              <a href="#" className="text-white transition hover:opacity-75"> Lorem ipsum</a>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </div>
+    
   </div>
-  <div className="border-t">
-    <div className="mx-auto flex max-w-screen-xl flex-col gap-y-4 px-4 py-3 text-center text-gray-500 sm:px-20 lg:flex-row lg:justify-between lg:text-left xl:px-10">
-      <p className="">© 2024 | All Rights Reserved</p>
-      <p className="-order-1 sm:order-none">Made by Zarak Khan </p>
-      <p className="">
-        <a className="" href="#">Privacy Policy</a>
-        <span>|</span>
-        <a className="" href="#">Terms of Service</a>
-      </p>
+  <hr />
+  <div className="licence-section mx-auto max-w-screen-lg space-y-2 py-3 lg:space-y-3 lg:px-8">
+  <div className="licence grid grid-cols-1 gap-8 lg:grid-cols-2 justify-between">
+    <p className="text-xs text-[#B4B9C1]">&copy; Copyright 2023 AI Legal Assistant. All Rights Reserved - Zarak Khan</p>
+    <p className="text-xs text-[#B4B9C1] lg:ml-9">Terms and conditions   |   Privacy policy</p>
+
     </div>
-  </div>
+    </div>
 </footer>
 
     </>

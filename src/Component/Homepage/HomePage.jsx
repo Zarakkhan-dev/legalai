@@ -1,10 +1,16 @@
 import React, { useState } from 'react'
 import Image from 'next/image';
-import header_pic from "../../../public/Picture/thom-holmes-J2e34-1CVVs-unsplash.jpg";
+import header_pic from "../../../public/Picture/Header_Image.png";
 import axios from 'axios';
 import Punjab_Bar_Council from "../../../public/Picture/Punjab_Bar_Council.png"
 import Tuf_logo from "../../../public/Picture/Tuf_logo.png";
 import Home_Page_Detail_1 from "../../../public/Picture/Home-Page-Detail-1.png"
+import Home_Page_Detail_2 from "../../../public/Picture/Home-Page-Detail-2.png"
+import Gallery_1 from '../SwiperSlider/Gallery_1';
+import Link from 'next/link';
+import Gallery_2 from '../SwiperSlider/Gallery_2';
+import Trail_Image from "../../../public/Picture/illustration-05.png"
+import Footer from '../Footer/Footer';
 const HomePage = () => {
 
   const [email,Setemail] = useState("");
@@ -39,7 +45,7 @@ const HomePage = () => {
 
       <div className="header-email-box  flex  ">
         <span className='border-[#3292A30] border-[1px] rounded-3xl py-1 flex ml-[5vh]'>
-        <input type="email" name="email" id="" placeholder='Email Address' className='ml-5 w-[40vh] outline-none' onChange={(e)=>Setemail(e.target.value)} value={email}/>
+        <input type="email" name="email" id="" placeholder='Email Address' className='ml-5 w-[33vh] outline-none' onChange={(e)=>Setemail(e.target.value)} value={email}/>
         <div className="icon bg-[#2C60EA] rounded-full py-2 px-3  mx-[5px] cursor-pointer" onClick={sendMail}>
         <i className="fa-solid fa-paper-plane " style={{color:"white"}}></i>
         </div>
@@ -61,9 +67,9 @@ const HomePage = () => {
   <div className="header-flex-2 flex h-full w-full space-x-3  px-2 md:justify-end ">
   
    
-    <div className="Header-image  w-[60%] h-[50vh] flex-col space-y-0 md:mt-20  ">
+    <div className="Header-image  w-[100%] h-[100%] flex-col space-y-0 md:mt-1  ">
      
-      <Image src={header_pic} width={500} height={500} alt='pic' className=' w-[100%] h-[100%] rounded-[6vh] ' />
+      <Image src={header_pic} width={500} height={500} alt='pic' className=' w-[100%] h-[100%]  ' />
     </div>
   </div>
 
@@ -91,12 +97,12 @@ const HomePage = () => {
         <li>Handle the client cases easily with AI assistent.</li>
         <li>Easily automate the procedure with already available data bases stored in system.</li>
         </ul>
-        <button className='mt-4 py-3 px-10 bg-[#2C60EA] text-white font-semibold rounded-full'>See Product Description </button>
+        <button className='mt-4 py-3 px-10 bg-[#2C60EA] text-white font-semibold rounded-full '>See Product Description  <i className="fa-solid fa-arrow-right ml-6 rotate-[-45deg]"></i></button>
       </div>
      </section>
 
-     <section className='Detail-Section-2 '>
-      <div className="Detail-Section-2-Content">
+     <section className='Detail-Section-2 grid grid-cols-2  w-[60%] mx-auto justify-center p-1 '>
+      <div className="Detail-Section-2-Content flex flex-col  place-items-start w-[80%] mt-0">
       <h1 className='text-[#F29F66]'>Easily Generate</h1>
         <h1 className=" text-4xl">Stay organised with AI Legal Assistant.</h1>
         <p className='my-3'>From calendering and communications to document management and case reporting, keep track of every detail without falling behind.</p>
@@ -106,12 +112,36 @@ centerlized calender.</li>
         <li>Easily generate, edit, and access data bases.</li>
         <li>Provides assistance in solving cases.</li>
         </ul>
-        <button className='mt-4 py-3 px-10 bg-[#2C60EA] text-white font-semibold rounded-full'>See Product Description </button>
+        <button className='mt-4 py-3 px-10 bg-[#2C60EA] text-white font-semibold rounded-full '>See Product Description   <i className="fa-solid fa-arrow-right ml-6 rotate-[-45deg] "></i></button>
       </div>
-      <div className="Detail-Section-2-Image">
-
+      <div className="Detail-Section-2-Image w-[100%] h-[100%] flex justify-center ml-[10vh] mt-[5vh] items-center">
+    <Image src={Home_Page_Detail_2} width={500} height={500} alt='Image'  className='w-[100%] h-[100%] ' />
       </div>
      </section>
+     
+     <section className="slider-1 my-10">
+    <h1 className='text-center text-3xl text-[#F29F66] my-2'>AI Legal Assistant</h1>
+    <h1 className='text-center text-4xl'>Do More With AILegal <span className='text-xl'>Assistant</span></h1>
+    <p className='text-center'>We have the details covered, so you can worry less.</p>
+     </section>
+      <Gallery_1/>
+      <Gallery_2/>
+      <section className='relative'>
+      <section className="Trial-Section bg-[#F8F8F8]  w-[70%] mx-auto  grid grid-cols-2 justify-center items-center rounded-3xl">
+        <div className="Trial-Section-Content flex flex-col  w-[80%] ml-auto items-start">
+        <h1 className='text-4xl'>Lets revolutionize the way you work</h1>
+        <p className='my-4 text-lg'>Start your 14 days free trail today.</p>
+        <Link href='/' className='bg-[#2C60EA] text-white font-semibold py-3 px-6 rounded-3xl'>
+          <p>Start Now <i className="fa-solid fa-arrow-right ml-6 rotate-[-45deg] "></i></p>
+        </Link>
+        </div>
+        <div className="Trail-Section-Image">
+        <Image  src={Trail_Image} width={500} height={500} className=' h-[70%]' />
+        </div>
+      </section>
+      <div className="rigid bg-[#1F232E] w-[100%] h-[30vh] absolute"></div>
+      </section>
+      <Footer/>
     </>
   )
 }

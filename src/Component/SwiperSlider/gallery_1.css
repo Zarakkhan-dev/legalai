@@ -1,0 +1,72 @@
+.swiper {
+    width: 80%;
+    margin: 0 auto;
+    height: 75vh;
+
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3vh;
+  }
+  .swiper-pagination{
+    position: absolute !important;
+    top: 90% !important;
+    left: 51% !important;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+     width :7vh !important;
+     height: 7vh !important;
+     border-radius: 15vh;
+     font-size: 10px !important;
+  
+  }
+  .swiper-button-next::after  {
+    display: none !important;
+  }
+  .swiper-button-prev::after {
+    display: none !important;
+  }
+  
+  .swiper-button-next{
+    background-image: url("../../../public/Picture/Right_Active_Arrow.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 100% 100% !important;
+    position: absolute !important;
+    top:90% !important;
+     right: 42% !important;
+  }
+  
+  .swiper-button-prev {
+    background-image: url("../../../public/Picture/Left_Active_Arrow.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 100% 100% !important;
+    position: absolute !important;
+    top:90% !important;
+     left: 44% !important;
+  
+  }
+  .swiper-button-next.swiper-button-disabled,
+  .swiper-button-prev.swiper-button-disabled {
+  opacity: 1 !important;
+  
+  }
+  .swiper-button-next.swiper-button-disabled{
+    background-image: url("../../../public/Picture/Right_Arrow.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 100% 100% !important;
+  opacity: 1 !important;
+  }
+  .swiper-button-prev.swiper-button-disabled {
+    background-image: url("../../../public/Picture/Left_Arrow.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 100% 100% !important;
+  }
+

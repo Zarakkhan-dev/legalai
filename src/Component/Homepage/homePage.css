@@ -17,11 +17,18 @@
     left: 20%;
 
 }
-.Detail-Section-content ul li{
+.Detail-Section-2-Image img{
+    
+    position: relative;
+    top:-13%;
+    left: -20%;
+
+}
+.Detail-Section-content ul li , .Detail-Section-2 ul li{
     position: relative;
     padding: 1vh;
 }
-.Detail-Section-content ul li::before{
+.Detail-Section-content ul li::before {
  content:"";
  position: absolute;
  top: 25%;
@@ -32,6 +39,24 @@
  border-radius: 15px;
 }
 
+.Detail-Section-2 ul li::before{
+    content:"";
+    position: absolute;
+    top: 30%;
+    left: -3%;
+    width: 10px;
+    height: 10px;
+    background-color: #2C60EA ;
+    border-radius: 15px;
+   }
+
+.Trial-Section{
+    position: relative;
+    z-index: 1;
+}
+.rigid{
+    top:50%;
+}
 @media only screen and (max-width: 760px)   {
     .Header-image{
         display: none;

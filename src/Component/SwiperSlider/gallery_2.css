@@ -1,0 +1,23 @@
+
+.gallery-2 .swiper {
+   
+    height: 83vh;
+
+  }
+.gallery-2  .swiper-pagination{
+    top: 90% !important;
+    left: 51% !important;
+  }
+
+  .gallery-2 .swiper-button-next{
+
+    top:90% !important;
+     right: 42% !important;
+  }
+  
+  .gallery-2 .swiper-button-prev {
+    
+    top:90% !important;
+     left: 44% !important;
+  
+  }
