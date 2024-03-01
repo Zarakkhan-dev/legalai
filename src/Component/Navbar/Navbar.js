@@ -46,12 +46,12 @@ const Navbar = () => {
         <Link href='/signin' className='text-lg font-semibold text-gray-800 hover:text-gray-600 mr-3' >
             Login
         </Link>
-      <button
-        type="button"
+      <Link
+        href='/chatbot'
         className=" bg-[#2C60EA] px-[5vh] py-3 text-lg font-semibold text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black rounded-3xl"
       >
         Try AILegal Assistant Free <i className="fa-solid fa-arrow-right ml-6 rotate-[-45deg] "></i>
-      </button>
+      </Link>
     </div>
     <div className="lg:hidden">
     <i className={`fa-solid fa-${menu_icon} fa-2xl`} onClick={()=>menu_icon ==="bars" ?SetIcon("xmark"):SetIcon("bars") }></i>
