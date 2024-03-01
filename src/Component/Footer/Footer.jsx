@@ -125,7 +125,7 @@ const Footer = () => {
   <hr />
   <div className="licence-section mx-auto max-w-screen-lg space-y-2 py-3 lg:space-y-3 lg:px-8">
   <div className="licence grid grid-cols-1 gap-8 lg:grid-cols-2 justify-between">
-    <p className="text-xs text-[#B4B9C1]">&copy; Copyright 2023 AI Legal Assistant. All Rights Reserved - Zarak Khan</p>
+    <p className="text-xs text-[#B4B9C1]">&copy; Copyright 2023 AI Legal Assistant. All Rights Reserved.Designed by Zarak Khan</p>
     <p className="text-xs text-[#B4B9C1] lg:ml-9">Terms and conditions   |   Privacy policy</p>
 
     </div>
