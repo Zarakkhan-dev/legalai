@@ -9,7 +9,7 @@ import Home_Page_Detail_2 from "../../../public/Picture/Home_Page_Detail_2.png"
 import Gallery_1 from '../SwiperSlider/Gallery_1';
 import Link from 'next/link';
 import Gallery_2 from '../SwiperSlider/Gallery_2';
-import Trail_Image from "../../../public/Picture/illustration_05.png"
+import Trail_Image from "../../../public/Picture/Trail_Section_Image.png"
 import Footer from '../Footer/Footer';
 const HomePage = () => {
 

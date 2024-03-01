@@ -4,9 +4,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation,Pagination } from 'swiper/modules';
 import Image from 'next/image';
-import Image_1 from "../../../public/Picture/illustration_02.png";
-import Image_2 from "../../../public/Picture/illustration_03.png";
-import Image_3 from "../../../public/Picture/illustration_04.png"
+import Image_1 from "../../../public/Picture/Slider_Image_1.png";
+import Image_2 from "../../../public/Picture/Slider_Image_2.png";
+import Image_3 from "../../../public/Picture/Slider_Image_3.png"
 import Link from 'next/link';
 
 
