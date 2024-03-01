@@ -64,7 +64,7 @@ const Chatbot = () => {
             src="https://overreacted.io/static/profile-pic-c715447ce38098828758e525a1128b87.jpg"
             alt="avatar"
           />
-          <span class="text-sm font-medium text-gray-700">Dan Abromov</span>
+          <span class="text-sm font-medium text-gray-700">Zarak Khan</span>
         </a>
         <a
           href="#"
