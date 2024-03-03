@@ -79,7 +79,7 @@ const HomePage = () => {
 
       <div className="partener-section mt-[15vh]">
         <h1 className='text-center text-2xl font-semibold'>Partnered with over 2 bar associations</h1>
-         <div className="Parteners w-[80%] mx-auto flex justify-center gap-5 mt-10 items-center">
+         <div className="Parteners w-[80%] mx-auto flex justify-center gap-9 mt-10 items-center">
           <Image src={Punjab_Bar_Council} width={100} height={100}/>
           <Image src={Tuf_logo} width={150} height={150}/>
          </div>
