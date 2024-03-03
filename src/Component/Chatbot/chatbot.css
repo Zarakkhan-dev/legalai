@@ -1,64 +1,36 @@
-.message_container_1::-webkit-scrollbar {
-    width: 10px; 
-/* Width of the scrollbar */
-  }
-  
-  /* Track - the area where the scrollbar is located */
-  .message_container_1::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Background color of the track */
-    margin: 1vh;
-  }
-  
-  /* Handle - the draggable scrolling element */
-  .message_container_1::-webkit-scrollbar-thumb {
-    background: #888; /* Color of the scrollbar */
-    border-radius: 5px; /* Rounded corners of the scrollbar */
-  }
-  
-  /* Handle on hover */
-  .message_container_1::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Color of the scrollbar on hover */
-  }
-.main_Screen{
-    width:100%;
-    height: 100vh;
-    overflow: hidden;
-}
-.container{
-    margin-top: 5vh;
-    display: flex;
-    justify-content: center;
-    gap:2vh
-}
-.container input{
-    border-radius: 15px;
-    padding:1vh;
-    border:1px solid black;
-    width: 30%;
-    outline: none;
-}
-.message_container_1{
-    width:60%;
-    height: 60vh;
-    margin: 10vh auto auto auto;
-   
-    padding: 3vh;
-    border-radius: 15px;
-    overflow-y: scroll;
-}
-.message_container{
-    display: grid;
-    grid-template-columns:  1fr;
-    justify-content: center;
-    align-items: center;
-    row-gap: 2vh;
-    margin-bottom: 4vh;
+.chat-Room{
+  box-shadow: 5px 7px 15px -4px rgba(105,102,102,0.75);
+-webkit-box-shadow: 5px 7px 15px -4px rgba(105,102,102,0.75);
+-moz-box-shadow: 5px 7px 15px -4px rgba(105,102,102,0.75);
 
 }
-    .Person_Querry,.Bot_response{
-        display: flex;
-        gap: 3vh;
-        align-items: center;
-    }
 
-   
+/* Customize the scrollbar */
+.Interface_Bot::-webkit-scrollbar {
+  height: 4px;  
+  height: 2px;
+  width: 5px;
+}
+.Interface_Bot {
+margin:10px 1px 0px 0px;
+}
+/* Handle */
+.Interface_Bot::-webkit-scrollbar-thumb {
+  background-color: #333; /* Full black color for the scrollbar */
+  border-radius: 15px; 
+  height: 2px !important;
+}
+
+/* Track */
+.Interface_Bot::-webkit-scrollbar-track {
+  background-color: transparent;/* Light black color for the scrollbar track */
+}
+
+/* Optional: Hover effects for the scrollbar */
+.Interface_Bot::-webkit-scrollbar-thumb:hover {
+ /* Darker black color on hover */
+}
+
+.Interface_Bot::-webkit-scrollbar-track:hover {
+  background-color: transparent; /* Darker light black color on hover */
+}

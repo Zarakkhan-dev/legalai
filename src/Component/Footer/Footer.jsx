@@ -44,7 +44,7 @@ const Footer = () => {
               target="_blank"
               className="text-white transition hover:opacity-75 text-2xl py-2 px-3 rounded-full bg-[#373F51] "
             >
-             <i class="fa-brands fa-instagram"></i>
+             <i className="fa-brands fa-instagram"></i>
             </a>
           </li>
 

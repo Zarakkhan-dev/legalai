@@ -5,18 +5,18 @@ import Link from 'next/link';
 const About = () => {
   return (
  
-<div class=" About-Section">
+<div className=" About-Section">
 
-<div class="relative mx-auto flex flex-col  sm:max-w-xl md:max-w-screen-xl md:flex-row">
+<div className="relative mx-auto flex flex-col  sm:max-w-xl md:max-w-screen-xl md:flex-row">
 
-  <div class="mx-auto  w-full max-w-xl md:mt-10 lg:max-w-screen-xl">
-    <div class="mb-16 lg:mb-0 lg:max-w-lg">
-      <div class="mb-6 max-w-xl">
+  <div className="mx-auto  w-full max-w-xl md:mt-10 lg:max-w-screen-xl">
+    <div className="mb-16 lg:mb-0 lg:max-w-lg">
+      <div className="mb-6 max-w-xl">
         <div>
-          <p class="bg-teal-accent-400 mb-2 inline-block rounded-full py-px text-xs font-semibold uppercase tracking-wider text-[#F29F66]">Chatbot </p>
+          <p className="bg-teal-accent-400 mb-2 inline-block rounded-full py-px text-xs font-semibold uppercase tracking-wider text-[#F29F66]">Chatbot </p>
         </div>
-        <h2 class="mb-6 max-w-lg text-4xl font-bold tracking-tight text-slate-700 sm:text-6xl sm:leading-snug">
-          <span class="inline-block font-bold ">Driven by data, powered by AI, controlled  <span className='text-[#2C60EA]'>by you</span></span>
+        <h2 className="mb-6 max-w-lg text-4xl font-bold tracking-tight text-slate-700 sm:text-6xl sm:leading-snug">
+          <span className="inline-block font-bold ">Driven by data, powered by AI, controlled  <span className='text-[#2C60EA]'>by you</span></span>
         </h2>
       </div>
       <div className='my-8 ml-14'> 
@@ -24,14 +24,14 @@ const About = () => {
         Click here to try chatbot <i className="fa-solid fa-arrow-right ml-6 rotate-[-45deg] "></i>
         </Link>
       </div>
-      <div class="flex  ml-14 gap-6">
+      <div className="flex  ml-14 gap-6">
         <div className="Disc-1 text-[#51555B] flex items-center gap-3"> <i className="fa-solid fa-check"></i>Free 14-day trial</div>
         <div className="Disc-2 text-[#51555B] flex items-center gap-3"><i className="fa-solid fa-check"></i>No credit card required</div>
       </div>
     </div>
   </div>
 
-  <div class="flex h-full w-full space-x-3 overflow-hidden px-2 md:justify-center">
+  <div className="flex h-full w-full space-x-3 overflow-hidden px-2 md:justify-center">
 
   <div className="Header-image  w-[100%] h-[100%] flex-col space-y-0 md:mt-1  ">
      
