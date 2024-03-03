@@ -27,7 +27,11 @@ const Chatbot = () => {
 
   const newChat =()=>{
     alert("New Chat ALert");
-    
+
+  }
+
+  const Logout=()=>{
+    router.push("/");
   }
   return (
     <>
@@ -42,7 +46,7 @@ const Chatbot = () => {
           </div>
           <div className="sidebar-content px-4 py-6">
             <ul className="flex flex-col w-full">
-              <li className="flex " onClick={newChat}>
+              <li className="flex Title_Name" onClick={newChat}>
                 <span className="cursor-pointer ml-3 mt-[-5vh] border border-1 border-[#292A30] text-[#51555B]  rounded-full py-2 px-5 flex items-center gap-3"> <i className="fa-solid fa-plus text-[#2C60EA]"></i> New Chat </span>
               </li>
               <li className="">
@@ -55,11 +59,15 @@ const Chatbot = () => {
         <main className="main flex flex-col flex-grow -ml-64 md:ml-0 transition-all duration-150 ease-in bg-[#F4F4F4]" >
           <header className="header  py-4 px-4" >
             <div className="header-content flex items-center  justify-end">
-
-              <div className="flex ml-auto mt-6 ">
-                <div className="User bg-[#51555B] mr-[7vh] py-3.5 px-4 rounded-full">
+               
+              <div className="flex ml-auto mt-6 relative gap-6">
+              <div className="logout_button flex items-center cursor-pointer" onClick={Logout}>
+                  <span>Logout</span>
+                </div>
+                <div className="User bg-[#51555B] mr-[7vh] py-3.5 px-4 rounded-full cursor-pointer " >
                   <i className="fa-solid fa-user-large fa-lg" style={{ color: "#F4F4F4" }}></i>
                 </div>
+             
               </div>
             </div>
           </header>
@@ -103,11 +111,11 @@ const Welcome_Interface_Chat =()=>{
   return(
     <>
     <section className="Welcome-Screen-Chatbot w-[90%] mx-auto">
-      <h1 className='text-[#2C60EA] text-4xl'>Hello again</h1>
+      <h1 className='text-[#2C60EA] text-4xl Title_Name'>Hello again</h1>
       <p className='text-lg' >Tell me what’s on your mind, or pick a suggestion.</p>
       <div className="Welcome-Screen-Chatbot-Grid grid grid-cols-3 mt-7 gap-6">
         <div className="Grid-Bot-1 border border-[#292A30] py-6 px-9 rounded-2xl bg-[#F4F4F4]">
-        <h1 className='text-[#2C60EA] text-3xl'>Understand</h1>
+        <h1 className='text-[#2C60EA] text-3xl Title_Name'>Understand</h1>
         <div className="Description mt-5 flex flex-col gap-4 ">
           <div className="Description-1 w-[60%] h-[4.5vh] rounded-3xl bg-white"></div>
           <div className="Description-1 w-[60%] h-[4.5vh] rounded-3xl bg-white"></div>
@@ -115,7 +123,7 @@ const Welcome_Interface_Chat =()=>{
         </div>
         </div>
         <div className="Grid-Bot-2 border border-[#292A30] py-6 px-9 rounded-2xl bg-[#F4F4F4]">
-          <h1 className='text-[#2C60EA] text-3xl'>Create</h1>
+          <h1 className='text-[#2C60EA] text-3xl Title_Name'>Create</h1>
           <div className="Description mt-5 flex flex-col gap-4 ">
           <div className="Description-1 w-[60%] h-[4.5vh] rounded-3xl bg-white"></div>
           <div className="Description-1 w-[60%] h-[4.5vh] rounded-3xl bg-white"></div>
@@ -123,7 +131,7 @@ const Welcome_Interface_Chat =()=>{
         </div>
         </div>
         <div className="Grid-Bot-3 border border-[#292A30] py-6 px-9 rounded-2xl bg-[#F4F4F4]">
-          <h1 className='text-[#2C60EA] text-3xl'>Explore</h1>
+          <h1 className='text-[#2C60EA] text-3xl Title_Name'>Explore</h1>
           <div className="Description mt-5 flex flex-col gap-4 ">
           <div className="Description-1 w-[60%] h-[4.5vh] rounded-3xl bg-white"></div>
           <div className="Description-1 w-[60%] h-[4.5vh] rounded-3xl bg-white"></div>

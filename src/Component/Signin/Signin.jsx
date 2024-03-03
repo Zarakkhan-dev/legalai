@@ -46,7 +46,7 @@ const Submission  = async(e)=>{
         </div>
          <div className="SignupForm">
 
-            <h1 className='text-center text-[25px] '>Welcome Back!</h1>
+            <h1 className='text-center text-[25px] Title_Name '>Welcome Back!</h1>
             <div className="Form_Navigation flex gap-5 my-3">
                 <Link href="/signup">
                 <button className="bg-transparent text-black border-[1px] border-solid border-black px-7 py-4 rounded-xl text-[20px]"> Sign Up</button>

@@ -37,7 +37,7 @@ const HomePage = () => {
         <div>
           <p className="bg-teal-accent-400 mb-2 inline-block rounded-full  py-px text-xs font-semibold uppercase tracking-wider text-[#F29F66]">Efficient Case</p>
         </div>
-        <h2 className="mb-6 max-w-lg text-3xl font-bold tracking-tight text-slate-700 sm:text-5xl sm:leading-snug">
+        <h2 className="Title_Name mb-6 max-w-lg text-3xl font-bold tracking-tight text-slate-700 sm:text-5xl sm:leading-snug">
         Simplify Legal Workflow AI Case Management
         </h2>
         <p className="text-base text-gray-700 md:text-lg">The software comes with AI management features to access data bases, assign tasks and track progress of various activities related to a case.</p>
@@ -90,7 +90,7 @@ const HomePage = () => {
       </div>
       <div className="Detail-Section-content flex flex-col  place-items-start w-[60%] mt-10">
         <h1 className='text-[#F29F66]'>Fast Track</h1>
-        <h1 className=" text-4xl">Grow faster with AI Legal Assistant.</h1>
+        <h1 className=" text-4xl Title_Name">Grow faster with AI Legal Assistant.</h1>
         <p className='my-3'>Get a 360-degree view of your cases. Attorneys and staff can track leads, access data bases and help from AI based legal assistant by just signing</p>
         <ul >
           <li>Customize web based client intake forms for any area of your practice.</li>
@@ -104,7 +104,7 @@ const HomePage = () => {
      <section className='Detail-Section-2 grid grid-cols-2  w-[60%] mx-auto justify-center p-1 '>
       <div className="Detail-Section-2-Content flex flex-col  place-items-start w-[80%] mt-0">
       <h1 className='text-[#F29F66]'>Easily Generate</h1>
-        <h1 className=" text-4xl">Stay organised with AI Legal Assistant.</h1>
+        <h1 className=" text-4xl Title_Name">Stay organised with AI Legal Assistant.</h1>
         <p className='my-3'>From calendering and communications to document management and case reporting, keep track of every detail without falling behind.</p>
         <ul >
           <li>Stay infront of important deadlines with one
@@ -121,7 +121,7 @@ centerlized calender.</li>
      
      <section className="slider-1 my-10">
     <h1 className='text-center text-3xl text-[#F29F66] my-2'>AI Legal Assistant</h1>
-    <h1 className='text-center text-4xl'>Do More With AILegal <span className='text-xl'>Assistant</span></h1>
+    <h1 className='text-center text-4xl Title_Name'>Do More With AILegal <span className='text-xl'>Assistant</span></h1>
     <p className='text-center'>We have the details covered, so you can worry less.</p>
      </section>
       <Gallery_1/>

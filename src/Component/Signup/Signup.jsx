@@ -65,7 +65,7 @@ const submit_Input =(e)=>{
         </div>
          <div className="SignupForm">
 
-            <h1 className='text-center text-[20px] '>Try 7 days for free</h1>
+            <h1 className='text-center text-[20px] Title_Name '>Try 7 days for free</h1>
             <div className="Form_Navigation flex gap-5 my-2">
             <Link href="/signup">
                 <button className="bg-[#2C60EA] text-white font-bold px-7 py-4 rounded-xl text-[20px] "> Sign Up</button>

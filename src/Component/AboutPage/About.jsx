@@ -16,7 +16,7 @@ const About = () => {
           <p className="bg-teal-accent-400 mb-2 inline-block rounded-full py-px text-xs font-semibold uppercase tracking-wider text-[#F29F66]">Chatbot </p>
         </div>
         <h2 className="mb-6 max-w-lg text-4xl font-bold tracking-tight text-slate-700 sm:text-6xl sm:leading-snug">
-          <span className="inline-block font-bold ">Driven by data, powered by AI, controlled  <span className='text-[#2C60EA]'>by you</span></span>
+          <span className="inline-block font-bold Title_Name">Driven by data, powered by AI, controlled  <span className='text-[#2C60EA]'>by you</span></span>
         </h2>
       </div>
       <div className='my-8 ml-14'> 

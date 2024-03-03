@@ -23,7 +23,7 @@ modules={[Navigation,Pagination]} className="swiper">
          <section className="Testimonial-1 grid grid-cols-2 justify-center gap-[14vh]">
             <div className="Reviews">
                 <h1 className='text-[#F29F66] text-2xl'> 1 lakh</h1>
-                <h1 className='text-4xl w-[80%] mt-3'>Word of praise from our users.</h1>
+                <h1 className='text-4xl w-[80%] mt-3 Title_Name'>Word of praise from our users.</h1>
                 <div className="Message bg-[#FFEEE2] py-[11vh] mt-[13vh] px-10 rounded-3xl relative">
                <p className='text-3xl'> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh eu </p>
                 <Image  src={Mark_quote_icon } width={500} height={500} className='w-[30%] absolute rotate-180 top-[-80px] left-[70px]'/>
@@ -38,7 +38,7 @@ modules={[Navigation,Pagination]} className="swiper">
        <section className="Testimonial-1 grid grid-cols-2 justify-center gap-[14vh]">
             <div className="Reviews">
                 <h1 className='text-[#F29F66] text-2xl'> 1 lakh</h1>
-                <h1 className='text-4xl w-[80%] mt-3'>Word of praise from our users.</h1>
+                <h1 className='text-4xl w-[80%] mt-3 Title_Name'>Word of praise from our users.</h1>
                 <div className="Message bg-[#FFEEE2] py-[11vh] mt-[13vh] px-10 rounded-3xl relative">
                <p className='text-3xl'> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh eu </p>
                 <Image  src={Mark_quote_icon } width={500} height={500} className='w-[30%] absolute rotate-180 top-[-80px] left-[70px]'/>

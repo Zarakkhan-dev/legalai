@@ -48,7 +48,7 @@ const Navbar = () => {
         </Link>
       <Link
         href='/chatbot'
-        className=" bg-[#2C60EA] px-[5vh] py-3 text-lg font-semibold text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black rounded-3xl"
+        className="Chatbot-font bg-[#2C60EA] px-[5vh] py-3 text-lg font-semibold text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black rounded-3xl"
       >
         Try AILegal Assistant Free <i className="fa-solid fa-arrow-right ml-6 rotate-[-45deg] "></i>
       </Link>
