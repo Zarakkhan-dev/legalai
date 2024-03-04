@@ -10,6 +10,13 @@ const Chatbot = () => {
   const router = useRouter();
   const [fields, updateFields] = useState("");
   const [chatbox, updatechatbox] = useState([]);
+
+  const [TitleChat,setTitleChat] =useState({
+
+  })
+  const [ChatHistory,setChatHistory] = useState({
+    Record_message:[]
+  });
   const handler = (e) => {
     updateFields(e.target.value)
   }
@@ -26,13 +33,25 @@ const Chatbot = () => {
   }
 
   const newChat =()=>{
-    alert("New Chat ALert");
+    setChatHistory((previous_Chat)=>{
+      return({
+        ...previous_Chat,
+        Record_message :[...chatbox]
+      })
+    })
 
+    console.log(ChatHistory)
+    for(let i = 0 ; i < 10 ; i++){
+  
+      console.log(ChatHistory.Record_message)
+    
+    }
   }
 
   const Logout=()=>{
     router.push("/");
   }
+
   return (
     <>
       <div className="flex flex-row min-h-screen bg-gray-100 text-gray-800">
@@ -52,8 +71,20 @@ const Chatbot = () => {
               <li className="">
                 <span className="flex font-medium text-sm text-[#51555B] px-4 my-4 uppercase">Recent</span>
               </li>
-
             </ul>
+            <div className="Recent_Chat">
+              {ChatHistory.Record_message.map((items)=>{
+           
+                return (
+                  <>
+                  <h1>{items.person}</h1>
+                  </>
+                )
+
+                
+              })}
+        
+            </div>
           </div>
         </aside>
         <main className="main flex flex-col flex-grow -ml-64 md:ml-0 transition-all duration-150 ease-in bg-[#F4F4F4]" >
@@ -73,7 +104,7 @@ const Chatbot = () => {
           </header>
           <div className="main-content flex flex-col flex-grow p-4">
             <div
-              className="chat-Room flex flex-col flex-grow   bg-white rounded-2xl mt-2 mb-6 mr-6"
+              className="chat-Room flex flex-col    bg-white rounded-2xl mt-2 mb-6 mr-6 w-[165vh] pb-4"
             >
              <div className="Interface_Bot  p-10 h-[65vh] overflow-y-auto ">
              {chatbox.length ===0 ? <Welcome_Interface_Chat/>:   <Interface_Chat chatbox={chatbox}/>}

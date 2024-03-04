@@ -1,5 +1,5 @@
 import React from 'react'
-import logo  from "../../../public/Picture/LegalAI.png";
+import logo  from "../../../public/Picture/Footer_Logo.png";
 import Image from 'next/image';
 const Footer = () => {
   return (
@@ -8,11 +8,11 @@ const Footer = () => {
   <div className="mx-auto  space-y-8 px-1 py-16 lg:space-y-16  max-w-screen-lg">
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>
-        <div className="text-4xl font-bold text-[#2c60ea]">
-         Al <span className='text-white text-sm font-normal'>Legal Assistant</span>
+        <div className="w-[13vh] ">
+       <Image src={logo} width={500} height={500} className='w-[100%]'/>
         </div>
 
-        <p className="mt-4 max-w-xs text-white w-[50%]">
+        <p className="mt-1 max-w-xs text-white w-[50%]">
         A complete AI based law firm assistant
         </p>
 
