@@ -8,11 +8,11 @@ const Footer = () => {
   <div className="mx-auto  space-y-8 px-1 py-16 lg:space-y-16  max-w-screen-lg">
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>
-        <div className="w-[120px]  h-[90px] flex items-end bg-black">
+        <div className="w-[120px]  h-[90px] flex items-end ">
        <Image src={logo} width={500} height={500} className='w-[100%]'/>
         </div>
 
-        <p className="mt-1 max-w-xs text-white w-[50%]">
+        <p className="max-w-xs text-white w-[50%]">
         A complete AI based law firm assistant
         </p>
 
