@@ -13,12 +13,12 @@ const chatbot = () => {
     const response =  await axios.post("api/verify_token",{token});
 
     if(response.status ===201){
-  
+      router.push("/")
     } 
     }
   useEffect(()=>{
 
-    alert(id);
+    
     Token_verify();
   },[])
   return (

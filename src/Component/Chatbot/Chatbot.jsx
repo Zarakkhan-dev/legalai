@@ -49,6 +49,7 @@ const Chatbot = () => {
   }
 
   const Logout=()=>{
+    
     router.push("/");
   }
 
