@@ -11,10 +11,11 @@ import Link from 'next/link';
 import Gallery_2 from '../SwiperSlider/Gallery_2';
 import Trail_Image from "../../../public/Picture/Trail_Section_Image.png"
 import Footer from '../Footer/Footer';
+import { useRouter } from 'next/router';
 const HomePage = () => {
 
   const [email, Setemail] = useState("");
-
+const router = useRouter();
   const sendMail = async (e) => {
     const response = await axios.post("api/email", { email });
     if (response.status === 202) {
@@ -43,14 +44,14 @@ const HomePage = () => {
                   <p className="text-base text-gray-700 md:text-lg">The software comes with AI management features to access data bases, assign tasks and track progress of various activities related to a case.</p>
                 </div>
 
-                {/* <div className="header-email-box  flex  ">
+                <div className="header-email-box  flex  ">
                   <span className='border-[#3292A30] border-[1px] rounded-3xl py-1 flex ml-[5vh]'>
                     <input type="email" name="email" id="" placeholder='Email Address' className='ml-5 w-[33vh] outline-none' onChange={(e) => Setemail(e.target.value)} value={email} />
                     <div className="icon bg-[#2C60EA] rounded-full py-2 px-3  mx-[5px] cursor-pointer" onClick={sendMail}>
                       <i className="fa-solid fa-paper-plane " style={{ color: "white" }}></i>
                     </div>
                   </span>
-                </div> */}
+                </div>
                 <div className="flex items-center mt-6 gap-3 ml-9">
                   <div className="stars flex gap-2">
                     <i className="fa-solid fa-star fa-xl" style={{ color: '#F5A620' }}></i>
@@ -128,9 +129,9 @@ const HomePage = () => {
           <div className="Trial-Section-Content flex flex-col  w-[80%] ml-auto items-start">
             <h1 className='text-4xl'>Lets revolutionize the way you work</h1>
             <p className='my-4 text-lg'>Start your 14 days free trial today.</p>
-            <Link href='/' className='bg-[#2C60EA] text-white font-semibold py-3 px-6 rounded-3xl'>
+            <span  className='bg-[#2C60EA] text-white font-semibold py-3 px-6 rounded-3xl cursor-pointer' onClick={()=>router.push("/signin")}>
               <p>Start Now <i className="fa-solid fa-arrow-right ml-6 rotate-[-45deg] "></i></p>
-            </Link>
+            </span>
           </div>
           <div className="Trail-Section-Image">
             <Image src={Trail_Image} width={500} height={500} className=' h-[70%]' />

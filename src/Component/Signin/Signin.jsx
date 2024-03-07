@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from 'next/image';
 import Logo from "../../../public/Picture/LegalAI.png"
-import Signup_Image from "../../../public/Picture/Signup_Image.jpg"
+import Signup_Image from "../../../public/Picture/Signin_Image.jpg"
 import Button_Load from "../Button_Loader/Button_Load";
 const Signin = () => {
 
@@ -68,12 +68,12 @@ const Submission  = async(e)=>{
             <input type="checkbox" name="" id="" />
             <p>I agree to the <span className='text-[#2C60EA]'>Terms</span> and <span className='text-[#2C60EA]'>Privacy Policy</span></p>
             </div>
-            <button type='submit' className="py-4 px-3 bg-[#2C60EA] rounded-lg text-white font-semibold"  > {Button_Loader ===""?<> Sign in</>:<Button_Load/> } </button>
+            <button type='submit' className="py-4 px-3 bg-[#2C60EA] rounded-lg text-white font-semibold"  > {Button_Loader ===""?<> Login</>:<Button_Load/> } </button>
             </form>
          </div>
     </div>
     <div className="Image_1_Side">
-    <Image src={Signup_Image}  className="object-cover"/>
+    <Image src={Signup_Image}  className="w-[100%] h-[80%] "/>
     </div>
  </div>
  </div>

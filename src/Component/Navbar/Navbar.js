@@ -75,7 +75,7 @@ const [Token,SetToken] = useState("");
     </div>
     <div className="hidden lg:block">
         <Link href='/signin' className={`text-lg font-semibold text-gray-800 hover:text-gray-600 mr-3 ${Remove_Nav}`} >
-            Signin
+            Login
         </Link>
       <span
         onClick={Verificationtoken}
