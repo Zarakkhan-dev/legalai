@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Logo from "../../../public/Picture/LegalAI.png"
 import Signup_Image from "../../../public/Picture/Signup_Image.jpg"
+import Button_Load from "../Button_Loader/Button_Load";
 const Signup = () => {
 const [inputText,update_text] = useState({
     username:"",
@@ -12,9 +13,9 @@ const [inputText,update_text] = useState({
     confirm_password:"",
     password:""
 })
-
+const [Button_Loader,Update_Loader] =useState("");
 const [alertmessage,updateAlert] = useState("");
-const[response,updateresponse] = useState("false");
+
 const submit_Input =(e)=>{
     const {name,value} = e.target;
     update_text((previous_value)=>{
@@ -28,6 +29,7 @@ const submit_Input =(e)=>{
     const router = useRouter();
     const submission =async (e)=>{
         e.preventDefault();
+        Update_Loader("True")
         const {email,password,confirm_password} = inputText;
 
         if(password ==confirm_password){
@@ -85,7 +87,7 @@ const submit_Input =(e)=>{
             <input type="checkbox" name="" id="" required/>
             <p>I agree to the <span className='text-[#2C60EA]'>Terms</span> and <span className='text-[#2C60EA]'>Privacy Policy</span></p>
             </div>
-            <button type='submit' className="py-3 px-3 bg-[#2C60EA] rounded-lg text-white font-semibold">Get Started</button>
+            <button type='submit' className="py-4 px-3 bg-[#2C60EA] rounded-lg text-white font-semibold">{Button_Loader ===""?<> Get Started</>:<Button_Load/> }</button>
             </form>
          </div>
     </div>

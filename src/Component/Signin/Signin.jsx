@@ -5,7 +5,10 @@ import Link from "next/link";
 import Image from 'next/image';
 import Logo from "../../../public/Picture/LegalAI.png"
 import Signup_Image from "../../../public/Picture/Signup_Image.jpg"
+import Button_Load from "../Button_Loader/Button_Load";
 const Signin = () => {
+
+  const [Button_Loader,Update_Loader] =useState("");
   const router = useRouter();
   const [inputText,update_text] = useState({
     email:"",
@@ -24,7 +27,7 @@ const submit_Input =(e)=>{
 const Submission  = async(e)=>{
   e.preventDefault();
   const {email,password} = inputText;
-
+  Update_Loader("True")
   console.log(email+"" +password)
   const response = await axios.post("api/signin" ,{email,password});
   if(response.status ===201){
@@ -65,7 +68,7 @@ const Submission  = async(e)=>{
             <input type="checkbox" name="" id="" />
             <p>I agree to the <span className='text-[#2C60EA]'>Terms</span> and <span className='text-[#2C60EA]'>Privacy Policy</span></p>
             </div>
-            <button type='submit' className="py-3 px-3 bg-[#2C60EA] rounded-lg text-white font-semibold">Sign In</button>
+            <button type='submit' className="py-4 px-3 bg-[#2C60EA] rounded-lg text-white font-semibold"  > {Button_Loader ===""?<> Sign in</>:<Button_Load/> } </button>
             </form>
          </div>
     </div>
