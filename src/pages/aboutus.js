@@ -1,10 +1,21 @@
 import About from '@/Component/AboutPage/About'
 import Footer from '@/Component/Footer/Footer'
 import Navbar from '@/Component/Navbar/Navbar'
-import Image from 'next/image'
+
 import React from 'react'
 import Head from "next/head";
+import { useEffect ,useState} from "react";
 const aboutus = () => {
+  const [Loading_Page,setPage] =useState("");
+  const delayedFunction =()=>{
+    setPage("True")
+  }
+  useEffect(()=>{
+    const timeoutId = setTimeout(delayedFunction, 3000);
+
+  
+    return () => clearTimeout(timeoutId);
+  })
   return (
    <>
     <Head>
@@ -12,9 +23,14 @@ const aboutus = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/LegalAI.png" type="image/png" sizes="128 x 128"  />
       </Head>
-   <Navbar/>
-    <About/>
+      {Loading_Page ==="False"?<Screen_Loading/> :(
+      <>
+      <Navbar/>
+      <About/>
    <Footer/>
+      </>
+      )}
+
    </>
   )
 }

@@ -2,8 +2,9 @@ import Chatbot from '@/Component/Chatbot/Chatbot'
 import React from 'react'
 import Head from "next/head";
 import axios from 'axios';
-import { useEffect } from 'react';
+import { useEffect ,useState} from 'react';
 import { useRouter } from 'next/router';
+
 const chatbot = () => {
   const router = useRouter();
   const { id } = router.query;
@@ -23,6 +24,16 @@ const chatbot = () => {
     
     Token_verify();
   },[])
+  const [Loading_Page,setPage] =useState("");
+  const delayedFunction =()=>{
+    setPage("True")
+  }
+  useEffect(()=>{
+    const timeoutId = setTimeout(delayedFunction, 3000);
+
+  
+    return () => clearTimeout(timeoutId);
+  })
   return (
     <>
      <Head>
@@ -30,7 +41,11 @@ const chatbot = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/LegalAI.png" type="image/png" sizes="128 x 128"  />
       </Head>
-    <Chatbot/>
+      {Loading_Page ==="False"?<Screen_Loading/> :(
+      <>
+     <Chatbot/>
+      </>
+      )}
     </>
   )
 }

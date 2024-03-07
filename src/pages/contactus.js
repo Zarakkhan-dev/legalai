@@ -2,7 +2,18 @@ import React from 'react'
 import Navbar from '@/Component/Navbar/Navbar'
 import Footer from '@/Component/Footer/Footer'
 import Head from "next/head";
+import { useEffect ,useState} from "react";
 const contactus = () => {
+	const [Loading_Page,setPage] =useState("");
+	const delayedFunction =()=>{
+	  setPage("True")
+	}
+	useEffect(()=>{
+	  const timeoutId = setTimeout(delayedFunction, 3000);
+  
+	
+	  return () => clearTimeout(timeoutId);
+	})
 	return (
 		<>
 		 <Head>
@@ -10,6 +21,8 @@ const contactus = () => {
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" href="/LegalAI.png" type="image/png" sizes="128 x 128"  />
       </Head>
+	  {Loading_Page ==="False"?<Screen_Loading/> :(
+      <>
 			<Navbar />
 			<div className="my-6">
 				<div className="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333] font-[sans-serif]">
@@ -91,6 +104,8 @@ const contactus = () => {
 			</div>
 
 		<Footer/>
+		</>
+      )}
 		</>
 	)
 }
