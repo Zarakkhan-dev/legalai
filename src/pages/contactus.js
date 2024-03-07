@@ -3,13 +3,14 @@ import Navbar from '@/Component/Navbar/Navbar'
 import Footer from '@/Component/Footer/Footer'
 import Head from "next/head";
 import { useEffect ,useState} from "react";
+import Screen_Loading from "@/Component/Screen_Loading/Screen_Loading";
 const contactus = () => {
 	const [Loading_Page,setPage] =useState("");
 	const delayedFunction =()=>{
 	  setPage("True")
 	}
 	useEffect(()=>{
-	  const timeoutId = setTimeout(delayedFunction, 3000);
+	  const timeoutId = setTimeout(delayedFunction, 2000);
   
 	
 	  return () => clearTimeout(timeoutId);
@@ -21,7 +22,7 @@ const contactus = () => {
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" href="/LegalAI.png" type="image/png" sizes="128 x 128"  />
       </Head>
-	  {Loading_Page ==="False"?<Screen_Loading/> :(
+	  {Loading_Page ===""?<Screen_Loading/> :(
       <>
 			<Navbar />
 			<div className="my-6">

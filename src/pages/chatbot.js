@@ -4,7 +4,7 @@ import Head from "next/head";
 import axios from 'axios';
 import { useEffect ,useState} from 'react';
 import { useRouter } from 'next/router';
-
+import Screen_Loading from "@/Component/Screen_Loading/Screen_Loading";
 const chatbot = () => {
   const router = useRouter();
   const { id } = router.query;
@@ -29,7 +29,7 @@ const chatbot = () => {
     setPage("True")
   }
   useEffect(()=>{
-    const timeoutId = setTimeout(delayedFunction, 3000);
+    const timeoutId = setTimeout(delayedFunction, 2000);
 
   
     return () => clearTimeout(timeoutId);
@@ -41,7 +41,7 @@ const chatbot = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/LegalAI.png" type="image/png" sizes="128 x 128"  />
       </Head>
-      {Loading_Page ==="False"?<Screen_Loading/> :(
+      {Loading_Page ===""?<Screen_Loading/> :(
       <>
      <Chatbot/>
       </>
