@@ -28,8 +28,7 @@ const Submission  = async(e)=>{
   console.log(email+"" +password)
   const response = await axios.post("api/signin" ,{email,password});
   if(response.status ===201){
-
-
+    localStorage.setItem("accessToken",response.data.token);
     router.push("/");
   }
   else{
