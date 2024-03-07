@@ -7,7 +7,7 @@ import Head from "next/head";
 import Screen_Loading from "@/Component/Screen_Loading/Screen_Loading";
 import { useEffect ,useState} from "react";
 const signin = () => {
-  const [Loading_Page,setPage] =useState("False");
+  const [Loading_Page,setPage] =useState("");
   const delayedFunction =()=>{
     setPage("True")
   }
