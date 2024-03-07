@@ -1,10 +1,37 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import logo  from "../../../public/Picture/LegalAI.png"
 import Link from 'next/link'
-
+import axios from 'axios'
+import { useRouter } from 'next/router'
 const Navbar = () => {
+
+  const router = useRouter();
   const [menu_icon,SetIcon] = useState("bars");
+
+  const [Remove_Nav , SetNavbar]  =useState("");
+const [Token,SetToken] = useState("");
+  const Verificationtoken =()=>{
+      if(Token ==="True"){
+          router.push("/chatbot");
+      }
+      else{
+        router.push("/signin");
+      }
+  }
+  async  function Token_verify(){
+    let token = localStorage.getItem("accessToken")
+    console.log(token);
+    const response =  await axios.post("api/verify_token",{token});
+
+    if(response.status ===201){
+      SetNavbar("active_Login");
+      SetToken("True")
+    } 
+    }
+  useEffect(()=>{
+    Token_verify();
+  },[])
   return (
    <>
     <div className="relative w-full bg-white">
@@ -43,15 +70,15 @@ const Navbar = () => {
       </ul>
     </div>
     <div className="hidden lg:block">
-        <Link href='/signin' className='text-lg font-semibold text-gray-800 hover:text-gray-600 mr-3' >
+        <Link href='/signin' className={`text-lg font-semibold text-gray-800 hover:text-gray-600 mr-3 ${Remove_Nav}`} >
             Login
         </Link>
-      <Link
-        href='/chatbot'
-        className="Chatbot-font bg-[#2C60EA] px-[5vh] py-3 text-lg font-semibold text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black rounded-3xl"
+      <span
+        onClick={Verificationtoken}
+        className="Chatbot-font bg-[#2C60EA] px-[5vh] py-3 text-lg font-semibold text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black rounded-3xl cursor-pointer"
       >
         Try AILegal Assistant Free <i className="fa-solid fa-arrow-right ml-6 rotate-[-45deg] "></i>
-      </Link>
+      </span>
     </div>
     <div className="lg:hidden">
     <i className={`fa-solid fa-${menu_icon} fa-2xl`} onClick={()=>menu_icon ==="bars" ?SetIcon("xmark"):SetIcon("bars") }></i>

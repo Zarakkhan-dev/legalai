@@ -28,7 +28,9 @@ const Submission  = async(e)=>{
   console.log(email+"" +password)
   const response = await axios.post("api/signin" ,{email,password});
   if(response.status ===201){
-    router.push("/chatbot");
+
+
+    router.push("/");
   }
   else{
     alert("Not valid person ");

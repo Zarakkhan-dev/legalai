@@ -35,8 +35,8 @@ const submit_Input =(e)=>{
 
         if (response.status === 201)
         {
+            localStorage.setItem("accessToken",response.data.token);
             router.push("/");
-            updateresponse("True")
 
         }
         else{

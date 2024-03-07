@@ -3,6 +3,10 @@
     font-family: "Montserrat", sans-serif;
 }
 
+
+.active_Login{
+    visibility: hidden;
+}
 @media only screen and (max-width: 760px) {
     .active-Logo{
         width: 80%;

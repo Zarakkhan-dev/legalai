@@ -10,7 +10,7 @@ export default async function handler(req, res) {
         const userResponse = await model.findOne({email});
         if(!userResponse){
         const hash_password = await bcrypt.hash(password,10);
-        const token = jwt.sign({email},secretKey);
+        const token = jwt.sign({email},secretKey,{ expiresIn: '72h' });
         const UserData = new model ({email,password:hash_password,token});
         const SavedResponse = await UserData.save();
         if(SavedResponse){
