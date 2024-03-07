@@ -1,8 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 import header_pic from "../../../public/Picture/Header_Image.png";
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 const About = () => {
+
+  const router = useRouter();
   return (
  
 <div className=" About-Section">
@@ -20,9 +22,9 @@ const About = () => {
         </h2>
       </div>
       <div className='my-8 ml-14'> 
-        <Link href="/" className='bg-[#2C60EA] text-white font-medium  text-lg py-4 px-8 rounded-full '>
+        <span  className='bg-[#2C60EA] text-white font-medium  text-lg py-4 px-8 rounded-full cursor-pointer' onClick={()=> router.push("/chatbot")}>
         Click here to try chatbot <i className="fa-solid fa-arrow-right ml-6 rotate-[-45deg] "></i>
-        </Link>
+        </span>
       </div>
       <div className="flex  ml-14 gap-6">
         <div className="Disc-1 text-[#51555B] flex items-center gap-3"> <i className="fa-solid fa-check"></i>Free 14-day trial</div>

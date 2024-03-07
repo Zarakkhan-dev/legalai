@@ -8,7 +8,7 @@ const Navbar = () => {
 
   const router = useRouter();
   const [menu_icon,SetIcon] = useState("bars");
-
+  const currentPage = router.pathname;
   const [Remove_Nav , SetNavbar]  =useState("");
 const [Token,SetToken] = useState("");
   const Verificationtoken =()=>{
@@ -31,6 +31,10 @@ const [Token,SetToken] = useState("");
     }
   useEffect(()=>{
     Token_verify();
+    if(currentPage === "/signin" || currentPage ==="/signup")
+    { 
+      SetNavbar("active_Login");
+    }
   },[])
   return (
    <>
@@ -71,7 +75,7 @@ const [Token,SetToken] = useState("");
     </div>
     <div className="hidden lg:block">
         <Link href='/signin' className={`text-lg font-semibold text-gray-800 hover:text-gray-600 mr-3 ${Remove_Nav}`} >
-            Login
+            Signin
         </Link>
       <span
         onClick={Verificationtoken}
