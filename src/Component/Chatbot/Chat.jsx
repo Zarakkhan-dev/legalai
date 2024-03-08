@@ -5,7 +5,7 @@ const Chat = ({person,bot}) => {
     <>
       <div className=" flex flex-col gap-4 w-full mb-4 ">
 
-            <div className="Person_Querry flex items-center gap-7 Title_Name">
+            <div className="Person_Querry flex gap-7 Title_Name items-start">
                 <div className="Person_icon rounded-full bg-[#2C60EA] py-[10px] px-[13px]"><i className="fa-solid fa-user-large" style={{color:"white"}}></i></div>
                 <div className="Querry">{person}</div>
             </div>

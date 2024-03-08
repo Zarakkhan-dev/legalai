@@ -7,6 +7,7 @@ import Logo from "../../../public/Picture/LegalAI.png"
 import Signup_Image from "../../../public/Picture/sign.jpg"
 import Button_Load from "../Button_Loader/Button_Load";
 const Signup = () => {
+    
 const [inputText,update_text] = useState({
     username:"",
     email:"",
@@ -26,35 +27,66 @@ const submit_Input =(e)=>{
     })
 
 }
+const validateEmail = (email) => {
+    // Define a regular expression for basic email validation
+    const emailPattern = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+  
+    // Additional check: Ensure there is at least one word after the @ symbol
+    const [, domain] = email.split('@');
+    const domainParts = domain.split('.');
+    
+    return emailPattern.test(email) && domainParts.length > 1;
+  };
     const router = useRouter();
     const submission =async (e)=>{
         e.preventDefault();
         Update_Loader("True")
         const {username,email,password,confirm_password} = inputText;
+        const verification_email= validateEmail(email)
+        
 
-        if(password ==confirm_password){
-        const response = await axios.post("api/signup" ,{username,email,password});
-        username
-        if (response.status === 201)
-        {
-            localStorage.setItem("accessToken",response.data.token);
-            router.push("/");
-
+        if(verification_email && username && password === confirm_password){
+            alert("All working");
+            // const response = await axios.post("api/signup" ,{username,email,password});
+            // username
+            // if (response.status === 201)
+            // {
+            //     localStorage.setItem("accessToken",response.data.token);
+            //     router.push("/");
+    
+            // }
+            // else{
+            //     alert("error");
+            // }
+            // update_text(()=>{
+            //     return {
+            //         email:"",
+            //         confirm_password:"",
+            //         password:""
+            //     }
+            // })
+    
+        
         }
         else{
-            alert("error");
+        if(!verification_email){
+            updateAlert("Email-Box")
+            Update_Loader("")
         }
-        update_text(()=>{
-            return {
-                email:"",
-                confirm_password:"",
-                password:""
+        else if(!username){
+            updateAlert("Username-Box")
+            Update_Loader("")
+        }
+        else if(password !== confirm_password){
+            updateAlert("Password-Box")
+            Update_Loader("")
             }
-        })
-    }else{
-        updateAlert("Invalid Username or Password")
+   
+        else{
+            alert("technical error")
+            Update_Loader("")
+        }
     }
-    
     }
   return (
 <>
@@ -78,10 +110,18 @@ const submit_Input =(e)=>{
             </div>
             <form onSubmit={submission} >
                 <div className="Inputs flex flex-col">
-            <input type="text" placeholder='Your name' name="username" value={inputText.username} onChange={submit_Input} required/>
-            <input type="email" name="email" placeholder='Email' value={inputText.email} onChange={submit_Input} required/>
-            <input type="password" name="password" placeholder='Password' value={inputText.password} onChange={submit_Input} required/>
-            <input type="password" name="confirm_password" placeholder='Confirm Password' value={inputText.confirm_password}  onChange={submit_Input} required/>
+                    <div className={`${alertmessage ==="Username-Box" ?"Username-Box"  :"" }`} >
+            <input type="text" placeholder='Your name' name="username" value={inputText.username} onChange={submit_Input} required  className='w-[100%]'/>
+            </div>
+            <div className={`${alertmessage === "Email-Box" ?"Email-Box":"" } w-[100%]`}>
+            <input type="email" name="email" placeholder='Email' value={inputText.email} onChange={submit_Input} required className='w-[100%]' />
+         </div>
+         <div className={`${alertmessage=== "Password-Box"?"Password-Box":"" } `}>
+            <input type="password" name="password" placeholder='Password' value={inputText.password} onChange={submit_Input} required  className='w-[100%]'/>
+            </div>
+            <div className={`${alertmessage=== "Password-Box"?"Password-Box":""}`}>
+            <input type="password" name="confirm_password" placeholder='Confirm Password' value={inputText.confirm_password}  onChange={submit_Input} required  className='w-[100%]'/>
+            </div>
             </div>
             <div className="Term_Policy flex gap-2 my-2 ">
             <input type="checkbox" name="" id="" required/>
