@@ -17,13 +17,7 @@
     left: 20%;
 
 }
-.Detail-Section-2-Image img{
-    
-    position: relative;
-    top:-13%;
-    left: -20%;
 
-}
 .Detail-Section-content ul li , .Detail-Section-2 ul li{
     position: relative;
     padding: 1vh;
@@ -42,7 +36,7 @@
 .Detail-Section-2 ul li::before{
     content:"";
     position: absolute;
-    top: 30%;
+    top: 15%;
     left: -7%;
     width: 10px;
     height: 10px;

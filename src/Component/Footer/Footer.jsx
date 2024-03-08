@@ -1,6 +1,7 @@
 import React from 'react'
 import logo  from "../../../public/Picture/Footer_Logo.png";
 import Image from 'next/image';
+import Link from 'next/link';
 const Footer = () => {
   return (
     <>
@@ -57,67 +58,20 @@ const Footer = () => {
 
           <ul className="mt-6 space-y-4 text-sm">
             <li>
-              <a href="#" className="text-white transition hover:opacity-75"> Lorem ipsum </a>
+              
+              <Link href="/" className="text-white transition hover:opacity-75"> Home </Link>
             </li>
 
             <li>
-              <a href="#" className="text-white transition hover:opacity-75"> Lorem ipsum </a>
+              <Link href="/aboutus" className="text-white transition hover:opacity-75"> About us </Link>
             </li>
 
             <li>
-              <a href="#" className="text-white transition hover:opacity-75"> Lorem ipsum </a>
+              <Link href="/contactus" className="text-white transition hover:opacity-75"> Contact us </Link>
             </li>
 
-            <li>
-              <a href="#" className="text-white transition hover:opacity-75"> Lorem ipsum </a>
-            </li>
           </ul>
         </div>
-
-        <div>
-          <p className="font-medium text-white">Solutions</p>
-
-          <ul className="mt-6 space-y-4 text-sm">
-            <li>
-              <a href="#" className="text-white transition hover:opacity-75"> Lorem ipsum  </a>
-            </li>
-
-            <li>
-              <a href="#" className="text-white transition hover:opacity-75"> Lorem ipsum </a>
-            </li>
-
-            <li>
-              <a href="#" className="text-white transition hover:opacity-75"> Lorem ipsum</a>
-            </li>
-
-            <li>
-              <a href="#" className="text-white transition hover:opacity-75"> Lorem ipsum</a>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <p className="font-medium text-white ">Company</p>
-
-          <ul className="mt-6 space-y-4 text-sm">
-            <li>
-              <a href="#" className="text-white  transition hover:opacity-75"> Lorem ipsum</a>
-            </li>
-
-            <li>
-              <a href="#" className="text-white  transition hover:opacity-75"> Lorem ipsum</a>
-            </li>
-
-            <li>
-              <a href="#" className="text-white  transition hover:opacity-75"> Lorem ipsum</a>
-            </li>
-
-            <li>
-              <a href="#" className="text-white transition hover:opacity-75"> Lorem ipsum</a>
-            </li>
-          </ul>
-        </div>
-
       </div>
     </div>
     
