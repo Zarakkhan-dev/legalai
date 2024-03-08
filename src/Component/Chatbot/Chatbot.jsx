@@ -39,13 +39,7 @@ const Chatbot = () => {
         Record_message :[...chatbox]
       })
     })
-
-    console.log(ChatHistory)
-    for(let i = 0 ; i < 10 ; i++){
-  
-      console.log(ChatHistory.Record_message)
-    
-    }
+    updatechatbox("");
   }
 
   const Logout=()=>{
@@ -70,9 +64,9 @@ const Chatbot = () => {
               <li className="flex Title_Name" onClick={newChat}>
                 <span className="cursor-pointer ml-3 mt-[-5vh] border border-1 border-[#292A30] text-[#51555B]  rounded-full py-2 px-5 flex items-center gap-3"> <i className="fa-solid fa-plus text-[#2C60EA]"></i> New Chat </span>
               </li>
-              <li className="">
+              {/* <li className="">
                 <span className="flex font-medium text-sm text-[#51555B] px-4 my-4 uppercase">Recent</span>
-              </li>
+              </li> */}
             </ul>
             <div className="Recent_Chat">
               {ChatHistory.Record_message.map((items)=>{
@@ -144,11 +138,12 @@ const Welcome_Interface_Chat =()=>{
   return(
     <>
     <section className="Welcome-Screen-Chatbot w-[90%] mx-auto">
-      <h1 className='text-[#2C60EA] text-4xl Title_Name'>Hello again</h1>
-      <p className='text-lg' >Tell me what’s on your mind, or pick a suggestion.</p>
+      <h1 className='text-[#2C60EA] text-4xl Title_Name'>Welcome Legal Professionals</h1>
+      <p className='text-lg' >
+Engage in legal enlightenment or choose a legal topic suggestion to explore.</p>
       <div className="Welcome-Screen-Chatbot-Grid grid grid-cols-3 mt-7 gap-6">
         <div className="Grid-Bot-1 border border-[#292A30] py-6 px-9 rounded-2xl bg-[#F4F4F4]">
-        <h1 className='text-[#2C60EA] text-3xl Title_Name'>Understand</h1>
+        <h1 className='text-[#2C60EA] text-2xl Title_Name'>Law Acts Section 302</h1>
         <div className="Description mt-5 flex flex-col gap-4 ">
           <div className="Description-1 w-[60%] h-[4.5vh] rounded-3xl bg-white"></div>
           <div className="Description-1 w-[60%] h-[4.5vh] rounded-3xl bg-white"></div>
@@ -156,7 +151,7 @@ const Welcome_Interface_Chat =()=>{
         </div>
         </div>
         <div className="Grid-Bot-2 border border-[#292A30] py-6 px-9 rounded-2xl bg-[#F4F4F4]">
-          <h1 className='text-[#2C60EA] text-3xl Title_Name'>Create</h1>
+          <h1 className='text-[#2C60EA] text-lg Title_Name'>Summarization of Law Cases</h1>
           <div className="Description mt-5 flex flex-col gap-4 ">
           <div className="Description-1 w-[60%] h-[4.5vh] rounded-3xl bg-white"></div>
           <div className="Description-1 w-[60%] h-[4.5vh] rounded-3xl bg-white"></div>
@@ -164,7 +159,7 @@ const Welcome_Interface_Chat =()=>{
         </div>
         </div>
         <div className="Grid-Bot-3 border border-[#292A30] py-6 px-9 rounded-2xl bg-[#F4F4F4]">
-          <h1 className='text-[#2C60EA] text-3xl Title_Name'>Explore</h1>
+          <h1 className='text-[#2C60EA] text-2xl Title_Name'>Prediction of Cases</h1>
           <div className="Description mt-5 flex flex-col gap-4 ">
           <div className="Description-1 w-[60%] h-[4.5vh] rounded-3xl bg-white"></div>
           <div className="Description-1 w-[60%] h-[4.5vh] rounded-3xl bg-white"></div>

@@ -54,7 +54,7 @@ const Footer = () => {
 
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
         <div>
-          <p className="font-medium text-white">Product</p>
+          <p className="font-medium text-white">Navigation</p>
 
           <ul className="mt-6 space-y-4 text-sm">
             <li>

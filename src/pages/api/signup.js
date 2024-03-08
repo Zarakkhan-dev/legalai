@@ -4,14 +4,14 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 connection();
 export default async function handler(req, res) {
-    const {email,password}= req.body;
+    const {username,email,password}= req.body;
     const secretKey ="bsbjashdwdne32bkrb32h3sdghnjkwebj23brh"
     try {
         const userResponse = await model.findOne({email});
         if(!userResponse){
         const hash_password = await bcrypt.hash(password,10);
         const token = jwt.sign({email},secretKey,{ expiresIn: '12h' });
-        const UserData = new model ({email,password:hash_password,token});
+        const UserData = new model ({username,email,password:hash_password,token});
         const SavedResponse = await UserData.save();
         if(SavedResponse){
             res.status(201).json({message:"Registered Successfully",token})

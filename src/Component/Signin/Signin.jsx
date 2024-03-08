@@ -4,7 +4,9 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from 'next/image';
 import Logo from "../../../public/Picture/LegalAI.png"
-import Signup_Image from "../../../public/Picture/Signin_Image.jpg"
+import Signup_Image from "../../../public/Picture/Things to know about District Courts by Richard Scotti.jpeg"
+
+
 import Button_Load from "../Button_Loader/Button_Load";
 const Signin = () => {
 

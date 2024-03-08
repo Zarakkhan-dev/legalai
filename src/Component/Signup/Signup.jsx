@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Logo from "../../../public/Picture/LegalAI.png"
-import Signup_Image from "../../../public/Picture/Signup_Image.jpg"
+import Signup_Image from "../../../public/Picture/sign.jpg"
 import Button_Load from "../Button_Loader/Button_Load";
 const Signup = () => {
 const [inputText,update_text] = useState({
@@ -30,11 +30,11 @@ const submit_Input =(e)=>{
     const submission =async (e)=>{
         e.preventDefault();
         Update_Loader("True")
-        const {email,password,confirm_password} = inputText;
+        const {username,email,password,confirm_password} = inputText;
 
         if(password ==confirm_password){
-        const response = await axios.post("api/signup" ,{email,password});
-
+        const response = await axios.post("api/signup" ,{username,email,password});
+        username
         if (response.status === 201)
         {
             localStorage.setItem("accessToken",response.data.token);
@@ -92,7 +92,7 @@ const submit_Input =(e)=>{
          </div>
     </div>
     <div className="Image_1_Side">
-    <Image src={Signup_Image}  className="object-cover"/>
+    <Image src={Signup_Image}  className="w-[100%] object-contain"/>
     </div>
  </div>
  </div>
