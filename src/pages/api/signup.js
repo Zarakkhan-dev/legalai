@@ -14,8 +14,7 @@ export default async function handler(req, res) {
         const UserData = new model ({username,email,password:hash_password,token});
         const SavedResponse = await UserData.save();
         if(SavedResponse){
-            res.status(201).json({message:"Registered Successfully",token})
-            
+            res.status(201).json({message:"Registered Successfully",token})    
         }
         else{
             res.status(202).json({message:"Not Registered Successfully"})

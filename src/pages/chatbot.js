@@ -30,8 +30,6 @@ const chatbot = () => {
   }
   useEffect(()=>{
     const timeoutId = setTimeout(delayedFunction, 2000);
-
-  
     return () => clearTimeout(timeoutId);
   })
   return (
@@ -43,7 +41,9 @@ const chatbot = () => {
       </Head>
       {Loading_Page ===""?<Screen_Loading/> :(
       <>
-     <Chatbot/>
+      <div className='Section_Chat-bot overflow-hidden h-screen'>
+      <Chatbot/>
+      </div>
       </>
       )}
     </>

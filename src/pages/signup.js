@@ -13,8 +13,6 @@ const signup = () => {
   }
   useEffect(()=>{
     const timeoutId = setTimeout(delayedFunction, 2000);
-
-  
     return () => clearTimeout(timeoutId);
   })
   
