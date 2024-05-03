@@ -10,9 +10,7 @@ const chatbot = () => {
   const { id } = router.query;
   async  function Token_verify(){
     let token = localStorage.getItem("accessToken")
-    console.log(token);
     const response =  await axios.post("api/verify_token",{token});
-
     if(response.status ===201){
       
     }else{

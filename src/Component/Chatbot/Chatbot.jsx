@@ -10,10 +10,6 @@ const Chatbot = () => {
   const router = useRouter();
   const [fields, updateFields] = useState("");
   const [chatbox, updatechatbox] = useState([]);
-
-  const [TitleChat,setTitleChat] =useState({
-
-  })
   const [ChatHistory,setChatHistory] = useState({
     Record_message:[]
   });
@@ -27,7 +23,8 @@ const Chatbot = () => {
     const response = await axios.post("http://127.0.0.1:8000/predict/", { fields });
 
     if (response) {
-      updatechatbox([...chatbox, { person: fields, bot: response.data.response }])
+      updatechatbox([...chatbox, { person: fields, bot: response.data.response }]);
+
       updateFields("");
     }
   }

@@ -17,9 +17,10 @@ const HomePage = () => {
   const [email, Setemail] = useState("");
 const router = useRouter();
   const sendMail = async (e) => {
+    Setemail("")
     const response = await axios.post("api/email", { email });
     if (response.status === 202) {
-        
+        alert("Thank you for subscribe our newsleter")
     }
   }
   return (
