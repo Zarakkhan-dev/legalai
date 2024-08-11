@@ -9,12 +9,33 @@ const contactus = () => {
 	const delayedFunction =()=>{
 	  setPage("True")
 	}
+	const [data , setData] = useState({
+		name:"",
+		email: "" ,
+		subject:"",
+		message : ""
+	});
+
+	const handler = (event)=>{
+
+		const {name,value} =  event.target
+		setData ((previous)=>{
+		return {
+			...previous
+		}
+	})
+	}
+
+
 	useEffect(()=>{
 	  const timeoutId = setTimeout(delayedFunction, 2000);
-  
-	
 	  return () => clearTimeout(timeoutId);
 	})
+	const submssion= (event)=>{
+		event.preventDefault();
+	
+		alert("Our Team will reached")
+	}
 	return (
 		<>
 		 <Head>
@@ -86,7 +107,7 @@ const contactus = () => {
 						</div>
 					</div>
 
-					<form method="post" className="ml-auo space-y-4">
+					<form  className="ml-auo space-y-4" onSubmit={submssion}>
 						<input type='text' name="name" placeholder='Name'
 							className="w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]" />
 						<input type='email'

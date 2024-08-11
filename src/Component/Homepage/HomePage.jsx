@@ -20,7 +20,7 @@ const router = useRouter();
     Setemail("")
     const response = await axios.post("api/email", { email });
     if (response.status === 202) {
-        alert("Thank you for subscribe our newsleter")
+        alert("Thank you for subscribe our newsletter")
     }
   }
   return (
