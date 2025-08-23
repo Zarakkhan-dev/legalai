@@ -8,19 +8,19 @@ import Screen_Loading from "@/Component/Screen_Loading/Screen_Loading";
 const chatbot = () => {
   const router = useRouter();
   const { id } = router.query;
-  async  function Token_verify(){
-    let token = localStorage.getItem("accessToken")
-    const response =  await axios.post("api/verify_token",{token});
-    if(response.status ===201){
+  // async  function Token_verify(){
+  //   let token = localStorage.getItem("accessToken")
+  //   const response =  await axios.post("api/verify_token",{token});
+  //   if(response.status ===201){
       
-    }else{
-      router.push("/")
-    }
-    }
+  //   }else{
+  //     router.push("/")
+  //   }
+  //   }
   useEffect(()=>{
 
     
-    Token_verify();
+    // Token_verify();
   },[])
   const [Loading_Page,setPage] =useState("");
   const delayedFunction =()=>{

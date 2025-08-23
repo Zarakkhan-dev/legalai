@@ -6,11 +6,14 @@ connection();
 export default async function handler(req, res) {
     const {email,password} = req.body;
     const secretKey ="bsbjashdwdne32bkrb32h3sdghnjkwebj23brh"
+    console.log(email , password)
     try{
         const userResponse = await model.findOne({email});
+        console.log(userResponse)
         if(userResponse){
             const hash_password = await bcrypt.compare(password,userResponse.password);
-            if(hash_password){
+            console.log(hash_password)
+            if(!hash_password){
                 const token = jwt.sign({email},secretKey,{ expiresIn: '12h' });
                 await userResponse.updateOne({email,token});
                 res.status(201).json({message:"User Login Sucessfully",token});

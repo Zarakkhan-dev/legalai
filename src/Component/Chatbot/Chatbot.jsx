@@ -40,11 +40,9 @@ const Chatbot = () => {
   }
 
   const Logout=()=>{
-     localStorage.removeItem("accessToken");
+    localStorage.removeItem("accessToken");
     router.push("/");
   }
-
-  
   return (
     <>
       <div className="flex flex-row min-h-screen bg-gray-100 text-gray-800">
